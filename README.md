@@ -12,6 +12,8 @@ By default it mines **Pearl (PRL)** with SRBMiner-Multi on NVIDIA GPUs (algorith
 | `WORKER` | no | `salad01` | Defaults to `SALAD_MACHINE_ID` (Salad sets this itself) |
 | `MINER` | no | `srbminer` | `srbminer` (default), `lolminer`, `xmrig` |
 | `ALGO` | no | `pearlhash` | Default `pearlhash` (PRL). Change it only if you switch coins |
+| `TLS` | no | `auto` | `auto` turns TLS on for `stratum+ssl://` URLs and port 443; or set `true`/`false` |
+| `RESTART_DELAY` | no | `30` | Seconds to wait after the miner stops, so the error stays visible in logs |
 | `GPU_ONLY` | no | `true` | Adds `--disable-cpu` for pearlhash so the CPU stays idle |
 | `PASSWORD` | no | `x` | Pool password field |
 | `WORKER_SEP` | no | `.` | Separator in `ADDRESS.WORKER` (some pools want `/` or `_`) |

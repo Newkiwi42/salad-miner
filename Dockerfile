@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 ARG LOLMINER_VERSION=1.98a
 ARG XMRIG_VERSION=6.26.0
@@ -9,7 +9,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
     NVIDIA_DRIVER_CAPABILITIES=compute,utility
 
 RUN apt-get update \
- && apt-get install -y --no-install-recommends ca-certificates curl tar \
+ && apt-get install -y --no-install-recommends ca-certificates curl tar bsdutils \
  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /opt/miners
